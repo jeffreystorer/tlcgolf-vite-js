@@ -1,0 +1,25 @@
+import React from 'react';
+import { useRecoilState } from 'recoil';
+import { dimensionsOptionItems } from '@/optionitems';
+import * as state from '@/store';
+import '@/styles/App.css';
+
+export default function DimensionsDropdown() {
+  const [dimensionIndex, setDimensionIndex] = useRecoilState(
+    state.dimensionIndex
+  );
+
+  const handleChange = (event) => {
+    setDimensionIndex(event.target.value);
+  };
+
+  return (
+    <>
+      <label className='selector_lone'>
+        <select value={dimensionIndex} onChange={handleChange}>
+          {dimensionsOptionItems}
+        </select>
+      </label>
+    </>
+  );
+}
