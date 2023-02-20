@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-//import useVisibilityChange from 'use-visibility-change';
+import { useVisibilityChange } from 'use-visibility-change';
 import {
   IndividualTableHeader,
   CHTableBody,
@@ -25,7 +25,7 @@ export default function IndividualPage() {
   const onShow = () => {
     window.location.reload();
   };
-  //useVisibilityChange({ onShow });
+  useVisibilityChange({ onShow });
 
   let allTeesSelected = returnAllTeesSelected(teesSelected);
 

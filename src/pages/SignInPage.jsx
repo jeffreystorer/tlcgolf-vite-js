@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 //import preval from 'preval.macro';
 import FetchData from '@/components/fetchdata/FetchData';
-//import FetchDataSaturday from '@/components/fetchdata/FetchDataSaturday';
 import SignIn from '@/components/signin/SignIn';
 import capitalize from '@/utils/capitalize';
 import { get, set } from '@/utils/localStorage';

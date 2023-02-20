@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-//import useVisibilityChange from 'use-visibility-change';
+import { useVisibilityChange } from 'use-visibility-change';
 import { TableAll } from '@/components/groups';
 import FetchData from '@/components/fetchdata/FetchData';
 import { GroupAndCourseDropdowns } from '@/components/common';
@@ -23,7 +23,7 @@ export default function GroupsPage() {
   const onShow = () => {
     window.location.reload();
   };
-  //useVisibilityChange({ onShow });
+  useVisibilityChange({ onShow });
 
   useEffect(() => {
     setCourse(savedCourse);

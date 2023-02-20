@@ -1,5 +1,5 @@
 import React from 'react';
-//import useVisibilityChange from 'use-visibility-change';
+import { useVisibilityChange } from 'use-visibility-change';
 import FetchData from '@/components/fetchdata/FetchData';
 import { Table } from '@/components/lineup';
 import { loginStale } from '@/utils';
@@ -9,7 +9,7 @@ export default function LineupPage() {
   const onShow = () => {
     window.location.reload();
   };
-  //useVisibilityChange({ onShow });
+  useVisibilityChange({ onShow });
 
   if (loginStale()) return <FetchData />;
 
