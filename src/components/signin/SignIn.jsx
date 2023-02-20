@@ -8,7 +8,7 @@ export default function SignInForm({
   handleInputChange,
   handleClick,
   handleDataModeChange,
-  //build,
+  build,
 }) {
   return (
     <>
@@ -56,11 +56,11 @@ export default function SignInForm({
         />
         <label htmlFor='dataModeGHIN'>&nbsp;Fetch Data from GHIN</label>
 
-        {/* <footer className='footer--center'>
+        <footer className='footer--center'>
           {build}
           <br />
           <br />
-        </footer> */}
+        </footer>
       </div>
     </>
   );

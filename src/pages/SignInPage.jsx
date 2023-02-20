@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import preval from 'preval.macro';
+import preval from 'preval.macro';
 import FetchData from '@/components/fetchdata/FetchData';
 import SignIn from '@/components/signin/SignIn';
 import capitalize from '@/utils/capitalize';
@@ -7,8 +7,8 @@ import { get, set } from '@/utils/localStorage';
 import '@/styles/App.css';
 
 export default function SignInPage() {
-  /*  const build =
-    'Build: ' + preval`module.exports = new Date().toLocaleString();`; */
+  const build =
+    'Build: ' + preval`module.exports = new Date().toLocaleString();`;
   const [loading, setLoading] = useState(true);
   const [dataModeGHIN, setDataModeGHIN] = useState(true);
   let ghinNumber = get('ghinNumber') ? get('ghinNumber') : '';
@@ -43,7 +43,7 @@ export default function SignInPage() {
           handleInputChange={handleInputChange}
           handleClick={handleClick}
           handleDataModeChange={handleDataModeChange}
-          //build={build}
+          build={build}
         />
       ) : (
         <>
