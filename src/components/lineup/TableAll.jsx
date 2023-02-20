@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import firebaseApp from 'firebase';
+import firebaseApp from '@/firebase';
 import { ref, getDatabase } from 'firebase/database';
 import { useList } from 'react-firebase-hooks/database';
 import { Loading } from '@/components/common';

@@ -19,19 +19,19 @@ const localStorageEffect =
 export const course = atom({
   key: 'course',
   default: '',
-  effects_UNSTABLE: [localStorageEffect('course')],
+  effects: [localStorageEffect('course')],
 });
 
 export const group = atom({
   key: 'group',
   default: '',
-  effects_UNSTABLE: [localStorageEffect('group')],
+  effects: [localStorageEffect('group')],
 });
 
 export const teesSelected = atom({
   key: 'teesSelected',
   default: {},
-  effects_UNSTABLE: [localStorageEffect('teesSelected')],
+  effects: [localStorageEffect('teesSelected')],
 });
 
 export const idsInLineup = selector({
@@ -44,7 +44,7 @@ export const idsInLineup = selector({
 export const playersInLineup = atom({
   key: 'playersInLineup',
   default: [],
-  //effects_UNSTABLE: [localStorageEffect("playersInLineup")],
+  //effects: [localStorageEffect("playersInLineup")],
 });
 
 export const playerCount = selector({
@@ -95,13 +95,13 @@ export const lineupTitle = atom({
 export const showLocalNumbers = atom({
   key: 'showLocalNumbers',
   default: false,
-  effects_UNSTABLE: [localStorageEffect('showLocalNumbers')],
+  effects: [localStorageEffect('showLocalNumbers')],
 });
 
 export const showTeamHcp = atom({
   key: 'showTeamHcp',
   default: false,
-  effects_UNSTABLE: [localStorageEffect('showTeamHcp')],
+  effects: [localStorageEffect('showTeamHcp')],
 });
 
 export const showAddTeamMember = atom({
@@ -118,19 +118,19 @@ export const showAddTeamMember = atom({
     team8: false,
     team9: false,
   },
-  effects_UNSTABLE: [localStorageEffect('showAddTeamMember')],
+  effects: [localStorageEffect('showAddTeamMember')],
 });
 
 export const showFirstName = atom({
   key: 'showFirstName',
   default: false,
-  effects_UNSTABLE: [localStorageEffect('showFirstName')],
+  effects: [localStorageEffect('showFirstName')],
 });
 
 export const showIndividualHandicaps = atom({
   key: 'showIndividualHandicaps',
   default: true,
-  effects_UNSTABLE: [localStorageEffect('showIndividualHandicaps')],
+  effects: [localStorageEffect('showIndividualHandicaps')],
 });
 
 export const showAddDeletePlayers = atom({
@@ -230,19 +230,19 @@ export const playersNotInTeeTime = selector({
 export const currentLineupIndex = atom({
   key: 'currentLineupIndex',
   default: -1,
-  //effects_UNSTABLE: [localStorageEffect("currentLineupIndex")],
+  //effects: [localStorageEffect("currentLineupIndex")],
 });
 
 export const currentLineup = atom({
   key: 'currentLineup',
   default: null,
-  //effects_UNSTABLE: [localStorageEffect("currentLineup")],
+  //effects: [localStorageEffect("currentLineup")],
 });
 
 export const currentLineupKey = atom({
   key: 'currentLineupKey',
   default: '',
-  //effects_UNSTABLE: [localStorageEffect("currentLineupKey")],
+  //effects: [localStorageEffect("currentLineupKey")],
 });
 
 export const screenshotUrl = atom({
@@ -273,19 +273,19 @@ export const dimensionIndex = atom({
 export const hasSchedule = atom({
   key: 'hasSchedule',
   default: null,
-  effects_UNSTABLE: [localStorageEffect('hasSchedule')],
+  effects: [localStorageEffect('hasSchedule')],
 });
 
 export const schedules = atom({
   key: 'schedules',
   default: [],
-  effects_UNSTABLE: [localStorageEffect('schedules')],
+  effects: [localStorageEffect('schedules')],
 });
 
 export const betsArray = atom({
   key: 'betsArray',
   default: [],
-  effects_UNSTABLE: [localStorageEffect('bets')],
+  effects: [localStorageEffect('bets')],
 });
 
 export const showGameOptionsModal = atom({
