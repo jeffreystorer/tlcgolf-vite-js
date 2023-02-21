@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { get } from '@/utils/localStorage';
-import GolferApi from '@/services/golfer-api';
+import { get } from '@/utils';
+import { GolferApi } from '@/services';
 
 export default function useFindGolfer() {
   const [loading, setLoading] = useState(true);

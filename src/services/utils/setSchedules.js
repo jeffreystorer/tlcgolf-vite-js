@@ -1,4 +1,4 @@
-import { get, set } from '@/utils/localStorage';
+import { get, set } from '@/utils';
 
 export default function setSchedules(values) {
   let allSchedules = [];

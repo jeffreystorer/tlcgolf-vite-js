@@ -1,4 +1,4 @@
-import { get, set } from '@/utils/localStorage';
+import { get, set } from '@/utils';
 import { SHEET_ID } from '@/services/constants';
 
 export default function setSheetUrl(data) {

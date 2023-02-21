@@ -1,7 +1,11 @@
-import { get, set } from '@/utils/localStorage';
-import { aGender, aLastName } from '@/utils/getRosterFields';
-import setDefaultTeesSelected from '@/utils/setDefaultTeesSelected';
-import setLoginTimeStamp from '@/utils/setLoginTimeStamp';
+import {
+  aGender,
+  aLastName,
+  setDefaultTeesSelected,
+  setLoginTimeStamp,
+  get,
+  set,
+} from '@/utils';
 
 export default function setFoundGolferAndIsLoggedIn(afoundGolfer) {
   const lastName = get('lastName');

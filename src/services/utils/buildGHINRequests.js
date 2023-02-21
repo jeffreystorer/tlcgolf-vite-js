@@ -1,6 +1,6 @@
 import apiConfig from '@/ghin/config/api-config';
-import { get } from '@/utils/localStorage';
-import GolferApi from '@/services/golfer-api';
+import { get } from '@/utils';
+import { GolferApi } from '@/services';
 
 export default function buildGHINRequests() {
   const token = get('token');

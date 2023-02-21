@@ -1,5 +1,5 @@
 import { courses } from '@/data/index';
-import setCourseData from '@/services/utils/setCourseData';
+import { setCourseData } from '@/services/utils';
 
 export default function processCourseDataFromGHIN(data) {
   let courseReplacements = {

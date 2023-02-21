@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import preval from 'preval.macro';
-import FetchData from '@/components/fetchdata/FetchData';
-import SignIn from '@/components/signin/SignIn';
-import capitalize from '@/utils/capitalize';
-import { get, set } from '@/utils/localStorage';
+import { FetchData } from '@/components/fetchdata';
+import { SignIn } from '@/components/signin';
+import { capitalize, get, set } from '@/utils';
 import '@/styles/App.css';
 
 export default function SignInPage() {

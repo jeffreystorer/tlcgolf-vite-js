@@ -1,5 +1,5 @@
 //import { X_CORS_API_KEY } from '@/services/constants';
-import { get } from '@/utils/localStorage';
+import { get } from '@/utils';
 
 export default function buildCanadianRequests() {
   const allPlayersInTable = get('allPlayersInTable');

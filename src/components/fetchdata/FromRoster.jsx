@@ -1,6 +1,6 @@
 import React from 'react';
-import Loading from '@/components/fetchdata/Loading';
-import useFromRoster from '@/components/fetchdata/hooks/useFromRoster';
+import { Loading } from '@/components/common';
+import { useFromRoster } from '@/components/fetchdata/hooks';
 
 export default function FromRoster() {
   const [loading] = useFromRoster();

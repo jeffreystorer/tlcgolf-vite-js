@@ -1,4 +1,4 @@
-import BaseApi from '@/services/base-api';
+import { BaseApi }  from '@/services';
 
 class CourseApi extends BaseApi {
   getCourseData = (course_id, token) => {

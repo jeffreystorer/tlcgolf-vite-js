@@ -1,6 +1,6 @@
 import React from 'react';
-import Loading from '@/components/fetchdata/Loading';
-import useFromGHIN from '@/components/fetchdata/hooks/useFromGHIN';
+import { Loading } from '@/components/common';
+import { useFromGHIN } from '@/components/fetchdata/hooks';
 
 export default function FromGHIN() {
   const [loading] = useFromGHIN();

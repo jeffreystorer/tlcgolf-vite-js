@@ -1,4 +1,4 @@
-import { set } from '@/utils/localStorage';
+import { set } from '@/utils';
 
 export default function setCanadianData(data) {
   let canadianData = [];

@@ -1,7 +1,7 @@
 import React from 'react';
-import Loading from '@/components/fetchdata/Loading';
-import ChooseSource from '@/components/fetchdata/ChooseSource';
-import useFetchData from '@/components/fetchdata/hooks/useFetchData';
+import { Loading } from '@/components/common';
+import { ChooseSource } from '@/components/fetchdata';
+import { useFetchData } from '@/components/fetchdata/hooks';
 
 export default function FetchData() {
   const [loading] = useFetchData();

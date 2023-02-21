@@ -6,18 +6,19 @@ import {
   SHEET_ID,
   BATCH_KEY,
 } from '@/services/constants';
-import setCaptains from '@/services/utils/setCaptains';
-import setWednesdaySchedules from '@/services/utils/setWednesdaySchedules';
-import setTutorials from '@/services/utils/setTutorials';
-import setBets from '@/services/utils/setBets';
-import setSchedules from '@/services/utils/setSchedules';
-import setSheetUrl from '@/services/utils/setSheetUrl';
-import setCourseData from '@/services/utils/setCourseData';
-import useFetchSheetsData from '@/services/hooks/useFetchSheetsData';
-import useFetchToken from '@/services/hooks/useFetchToken';
-import { get, set } from '@/utils/localStorage';
-import setFoundGolferAndIsLoggedIn from '@/services/utils/setFoundGolferAndIsLoggedIn';
-import setPlayersAndGroups from '@/services/utils/setPlayersAndGroups';
+import {
+  setCaptains,
+  setWednesdaySchedules,
+  setTutorials,
+  setBets,
+  setSchedules,
+  setSheetUrl,
+  setCourseData,
+  setFoundGolferAndIsLoggedIn,
+  setPlayersAndGroups,
+} from '@/services/utils';
+import { useFetchSheetsData, useFetchToken } from '@/services/hooks';
+import { get, set } from '@/utils';
 
 export default function useFetchData() {
   const [loading, setLoading] = useState(true);

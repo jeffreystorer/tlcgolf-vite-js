@@ -1,8 +1,7 @@
 import React from 'react';
-import FromGHIN from '@/components/fetchdata/FromGHIN';
-import FromRoster from '@/components/fetchdata/FromRoster';
-import { get } from '@/utils/localStorage';
-import setFoundGolferAndIsLoggedIn from '@/services/utils/setFoundGolferAndIsLoggedIn';
+import { FromGHIN, FromRoster } from '@/components/fetchdata';
+import { get } from '@/utils';
+import { setFoundGolferAndIsLoggedIn } from '@/services/utils';
 
 export default function ChooseSource() {
   const dataMode = get('dataMode');

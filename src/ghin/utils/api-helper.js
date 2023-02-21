@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { defaultPagination } from '@/ghin/variables/pagination';
-import { SOURCE } from '@/services/base-api';
+import { SOURCE } from '@/services';
 import { encryptWithPublicKey } from '@/ghin/utils/encoder';
 
 export const golferCredentials = () => {

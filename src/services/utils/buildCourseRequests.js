@@ -1,5 +1,5 @@
-import { get } from '@/utils/localStorage';
-import CourseApi from '@/services/course-api';
+import { get } from '@/utils';
+import { CourseApi } from '@/services';
 
 export default function buildCourseRequests() {
   const token = get('token');

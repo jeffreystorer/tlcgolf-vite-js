@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import addGHINDataToPlayers from '@/services/utils/addGHINDataToPlayers';
-import processCourseDataFromGHIN from '@/services/utils/processCourseDataFromGHIN';
-import setCanadianData from '@/services/utils/setCanadianData';
-import useFetchRequests from '@/services/hooks/useFetchRequests';
-import useFindGolfer from '@/services/hooks/useFindGolfer';
-import setFoundGolferAndIsLoggedIn from '@/services/utils/setFoundGolferAndIsLoggedIn';
+import {
+  addGHINDataToPlayers,
+  processCourseDataFromGHIN,
+  setCanadianData,
+  setFoundGolferAndIsLoggedIn,
+} from '@/services/utils';
+import { useFetchRequests, useFindGolfer } from '@/services/hooks';
 
 export default function useFromGHIN() {
   const [loading, setLoading] = useState(true);

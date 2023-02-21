@@ -1,6 +1,4 @@
-import { get, set } from '@/utils/localStorage';
-import capitalize from '@/utils/capitalize';
-import { aLocalNumber } from '@/utils/getRosterFields';
+import { aLocalNumber, capitalize, get, set } from '@/utils';
 
 export default function addGHINDataToPlayers(data) {
   //data[x] will be null if player doesn't have a GHIN number

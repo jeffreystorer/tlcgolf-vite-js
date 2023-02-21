@@ -1,4 +1,4 @@
-import { set } from '@/utils/localStorage';
+import { set } from '@/utils';
 
 export default function setCaptains(values) {
   let captains = [];

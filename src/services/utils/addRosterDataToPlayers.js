@@ -1,11 +1,12 @@
 import capitalize from '@/utils/capitalize';
-import { get, set } from '@/utils/localStorage';
 import {
   aFirstName,
   anIndex,
   aGender,
   aLocalNumber,
-} from '@/utils/getRosterFields';
+  get,
+  set
+} from '@/utils';
 
 export default function addRosterDataToPlayers() {
   const roster = get('roster');

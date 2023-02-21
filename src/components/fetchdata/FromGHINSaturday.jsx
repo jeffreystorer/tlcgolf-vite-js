@@ -1,7 +1,7 @@
 import React from 'react';
-import Loading from '@/components/fetchdata/Loading';
-import SaturdayTable from '@/components/saturday/SaturdayTable';
-import useFromGHIN from '@/components/fetchdata/hooks/useFromGHIN';
+import { Loading } from '@/components/common';
+import { SaturdayTable } from '@/components/saturday';
+import { useFromGHIN } from '@/components/fetchdata/hooks';
 
 export default function FromGHINSaturday() {
   const [loading] = useFromGHIN();

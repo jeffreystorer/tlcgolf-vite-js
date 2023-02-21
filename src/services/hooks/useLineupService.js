@@ -1,5 +1,5 @@
 import { useResetRecoilState, useRecoilValue } from 'recoil';
-import firebaseApp from '../../firebase';
+import firebaseApp from '@/firebase';
 import { child, getDatabase, ref, push, remove } from 'firebase/database';
 import * as state from '@/store';
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import addRosterDataToPlayers from '@/services/utils/addRosterDataToPlayers';
-import setCanadianData from '@/services/utils/setCanadianData';
-import useFetchRequests from '@/services/hooks/useFetchRequests';
+import { addRosterDataToPlayers, setCanadianData } from '@/services/utils';
+import { useFetchRequests } from '@/services/hooks';
 
 export default function useFromRoster() {
   const [loading, setLoading] = useState(true);

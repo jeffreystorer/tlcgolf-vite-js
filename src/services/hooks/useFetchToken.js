@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import GolferApi from '@/services/golfer-api';
+import { GolferApi } from '@/services';
 
 export default function useFetchToken() {
   const [loading, setLoading] = useState(true);

@@ -1,7 +1,7 @@
 import React from 'react';
-import Loading from '@/components/fetchdata/Loading';
-import FromGHINSaturday from '@/components/fetchdata/FromGHINSaturday';
-import useFetchDataSaturday from '@/components/fetchdata/hooks/useFetchDataSaturday';
+import { Loading } from '@/components/common';
+import { FromGHINSaturday } from '@/components/fetchdata';
+import { useFetchDataSaturday } from '@/components/fetchdata/hooks';
 
 export default function FetchDataSaturday() {
   const [loading] = useFetchDataSaturday();
