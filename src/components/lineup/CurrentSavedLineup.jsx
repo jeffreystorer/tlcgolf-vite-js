@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useResetRecoilState, useRecoilValue } from 'recoil';
 import { Navigate } from 'react-router-dom';
 import { ConfirmDeleteModal } from '@/components/lineup';
-import { useLoadSavedLineup } from '@/hooks';
-import useLineupService from '@/services/hooks/useLineupService';
+import { useLoadSavedLineup } from '@/components/lineup/hooks';
+import useLineupService from '@/components/lineup/hooks/useLineupService';
 import * as state from '@/store';
 import '@/styles/App.css';
 

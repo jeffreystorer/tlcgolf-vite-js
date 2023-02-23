@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { playingDateOptionItems } from '@/optionitems';
+import { playingDateOptionItems } from '@/components/lineup/optionitems';
 import * as state from '@/store';
 import '@/styles/App.css';
 

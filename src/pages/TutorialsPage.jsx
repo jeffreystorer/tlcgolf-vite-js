@@ -1,5 +1,5 @@
 import React from 'react';
-import { get } from '@/utils';
+import { get } from '@/components/common/utils';
 
 export default function TutorialsPage() {
   const tutorials = get('tutorials');

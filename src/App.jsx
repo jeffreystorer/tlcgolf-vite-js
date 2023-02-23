@@ -32,7 +32,7 @@ import {
 import * as state from '@/store';
 import '@/styles/App.css';
 
-import { get } from '@/utils';
+import { get } from '@/components/common/utils';
 
 export default function App() {
   const hasSchedule = useRecoilValue(state.hasSchedule);

@@ -2,14 +2,13 @@ import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { useVisibilityChange } from 'use-visibility-change';
 import { TableAll } from '@/components/groups';
-import FetchData from '@/components/fetchdata/FetchData';
+import { FetchData } from '@/components/fetchdata';
 import { GroupAndCourseDropdowns } from '@/components/common';
+import { get, loginStale } from '@/components/common/utils';
 import {
-  getGroupsTableDisplayNumber,
-  get,
-  loginStale,
+  returnDisplayNumber,
   returnHasMultipleGroups,
-} from '@/utils';
+} from '@/components/groups/utils';
 import * as state from '@/store';
 import '@/styles/App.css';
 
@@ -31,7 +30,7 @@ export default function GroupsPage() {
     //eslint-disable-next-line
   }, []);
 
-  let displayNumber = getGroupsTableDisplayNumber(course, group, groups);
+  let displayNumber = returnDisplayNumber(course, group, groups);
 
   if (loginStale()) return <FetchData />;
 

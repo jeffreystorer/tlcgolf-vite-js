@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { dimensionsOptionItems } from '@/optionitems';
+import { dimensionsOptionItems } from '@/components/export/optionitems';
 import * as state from '@/store';
 import '@/styles/App.css';
 

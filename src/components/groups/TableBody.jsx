@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { get, createGroupsTableBodyRows } from '@/utils';
+import { get } from '@/components/common/utils';
+import { returnBodyRows } from '@/components/groups/utils';
 import * as state from '@/store';
 
 const TableBody = () => {
@@ -8,7 +9,7 @@ const TableBody = () => {
   const group = useRecoilValue(state.group);
   const groups = get('groups');
 
-  let rows = createGroupsTableBodyRows(course, group, groups);
+  let rows = returnBodyRows(course, group, groups);
   let rowsTD = [];
   let colCount = rows[0].length;
 

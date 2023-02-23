@@ -4,7 +4,7 @@ import {
   CopyPlayerListToClipboardButton,
   DownloadScreenshotButton,
 } from '@/components/export/buttons';
-import { showCopyLineupToClipboard } from '@/utils';
+import { showCopyLineupToClipboard } from '@/components/export/utils';
 import '@/styles/App.css';
 
 export default function CopyAndDownLoadButtonsContainer({ jpgImageRef }) {

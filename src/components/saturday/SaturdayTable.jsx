@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/common';
 import { SaturdayTableHeader, SaturdayTableBody } from '@/components/saturday';
-import { set } from '@/utils';
+import { set } from '@/components/common/utils';
 import '@/components/saturday/styles/saturday.css';
 
 export default function SaturdayTable({ loggedIn = false }) {

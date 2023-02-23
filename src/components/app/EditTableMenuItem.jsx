@@ -2,7 +2,7 @@ import React from 'react';
 import { useResetRecoilState } from 'recoil';
 import * as state from '@/store';
 import '@/styles/App.css';
-import { get, set } from '@/utils';
+import { get, set } from '@/components/common/utils';
 
 export default function EditTableMenuItem() {
   const resetPlayersInLineup = useResetRecoilState(state.playersInLineup);

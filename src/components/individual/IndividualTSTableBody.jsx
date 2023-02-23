@@ -1,8 +1,8 @@
 import React from 'react';
-import { returnIndividualTableBodyRows } from '@/utils';
+import { returnBodyRows } from '@/components/individual/utils';
 
 const TSTableBody = (props) => {
-  const rows = returnIndividualTableBodyRows(
+  const rows = returnBodyRows(
     'TS',
     props.index,
     props.gender,

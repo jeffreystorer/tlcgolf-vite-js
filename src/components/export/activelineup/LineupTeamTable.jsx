@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { LineupTeamTableHeader } from '@/components/export/activelineup';
-import { setTeamHcpAndProgs } from '@/utils';
+import { setTeamHcpAndProgs } from '@/components/common/utils';
 import '@/styles/App.css';
 
 const LineupTeamTable = ({

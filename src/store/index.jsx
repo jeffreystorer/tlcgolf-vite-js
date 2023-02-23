@@ -1,5 +1,6 @@
 import { atom, selector } from 'recoil';
-import { createPlayersArray, getPlayersNotInTeeTime } from '@/utils';
+import { createPlayersArray } from '@/components/common/utils';
+import { getPlayersNotInTeeTime } from '@/components/lineup/utils';
 
 const localStorageEffect =
   (key) =>

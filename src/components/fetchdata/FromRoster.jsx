@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading } from '@/components/common';
+import { Loading } from '@/components/fetchdata';
 import { useFromRoster } from '@/components/fetchdata/hooks';
 
 export default function FromRoster() {

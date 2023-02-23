@@ -1,8 +1,8 @@
 import React from 'react';
-import { createSaturdayTableBodyRows } from '@/utils';
+import { returnBodyRows } from '@/components/saturday/utils';
 
 const SaturdayTableBody = () => {
-  let rows = createSaturdayTableBodyRows();
+  let rows = returnBodyRows();
   let rowsTD = [];
   let colCount = rows[0].length;
 

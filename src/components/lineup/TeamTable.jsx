@@ -8,7 +8,7 @@ import {
   WalkRideDropdown,
 } from '@/components/lineup/dropdowns';
 import * as state from '@/store';
-import { get, setTeamHcpAndProgs } from '@/utils';
+import { get, setTeamHcpAndProgs } from '@/components/common/utils';
 import '@/styles/App.css';
 
 const TeamTable = ({ teamNumber, teamMembers }) => {

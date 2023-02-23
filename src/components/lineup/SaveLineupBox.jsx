@@ -10,9 +10,9 @@ import {
 } from 'recoil';
 import { TitledBox } from '@/components/common';
 import { GameOptionsModal } from '@/components/lineup';
-import { useSaveLineupToFirebase } from '@/hooks';
+import { useSaveLineupToFirebase } from '@/components/lineup/hooks';
 import * as state from '@/store';
-import { get } from '@/utils';
+import { get } from '@/components/common/utils';
 
 export default function SaveLineupBox({ snapshots }) {
   const realGhinNumber = useRecoilValue(state.realGhinNumber);

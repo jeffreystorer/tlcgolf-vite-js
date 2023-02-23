@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import preval from 'preval.macro';
 import { FetchData } from '@/components/fetchdata';
 import { SignIn } from '@/components/signin';
-import { capitalize, get, set } from '@/utils';
+import { capitalize, get, set } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function SignInPage() {

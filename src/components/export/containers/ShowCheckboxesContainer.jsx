@@ -7,7 +7,7 @@ import {
   ShowTeamHcpCheckbox,
 } from '@/components/export/checkboxes';
 import * as state from '@/store';
-import { get } from '@/utils';
+import { get } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function ShowCheckboxesContainer() {

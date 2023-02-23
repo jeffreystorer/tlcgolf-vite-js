@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading } from '@/components/common';
+import { Loading } from '@/components/fetchdata';
 import { useFromGHIN } from '@/components/fetchdata/hooks';
 
 export default function FromGHIN() {

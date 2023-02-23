@@ -1,10 +1,13 @@
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
 import { CancelSelectTeesButton } from '@/components/lineup/buttons';
-import { courses } from '@/data';
-import { useUpdatePlayersInLineup, useUpdateTeamTables } from '@/hooks';
-import { get, buildTeeArray, set } from '@/utils';
-import { selectTeesOptionItems } from '@/optionitems';
+import { courses } from '@/components/common/data';
+import {
+  useUpdatePlayersInLineup,
+  useUpdateTeamTables,
+} from '@/components/lineup/hooks';
+import { get, buildTeeArray, set } from '@/components/common/utils';
+import { selectTeesOptionItems } from '@/components/lineup/optionitems';
 import * as state from '@/store';
 import '@/styles/App.css';
 

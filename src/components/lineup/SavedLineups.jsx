@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRecoilState, useResetRecoilState, useSetRecoilState } from 'recoil';
 import { ConfirmDeleteModal, MissingPlayerModal } from '@/components/lineup';
-import useLineupService from '@/services/hooks/useLineupService';
+import useLineupService from '@/components/lineup/hooks/useLineupService';
 import * as state from '@/store';
 import '@/styles/App.css';
 

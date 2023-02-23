@@ -10,7 +10,7 @@ import {
   holesOptionItems,
   puttsOptionItems,
   rulesOptionItems,
-} from '@/optionitems';
+} from '@/components/lineup/optionitems';
 import * as state from '@/store';
 import '@/styles/App.css';
 

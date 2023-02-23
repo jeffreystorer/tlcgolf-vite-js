@@ -2,9 +2,9 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useRecoilState, useRecoilValue, useResetRecoilState } from 'recoil';
-import useLineupService from '@/services/hooks/useLineupService';
+import useLineupService from '@/components/lineup/hooks/useLineupService';
 import * as state from '@/store';
-import { get, set } from '@/utils';
+import { get, set } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function MissingPlayerModal() {

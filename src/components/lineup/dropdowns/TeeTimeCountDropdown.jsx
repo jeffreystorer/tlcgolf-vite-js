@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 //import * as _ from "lodash"
-import { teeTimeCountOptionItems } from '@/optionitems';
+import { teeTimeCountOptionItems } from '@/components/lineup/optionitems';
 import * as state from '@/store';
 import '@/styles/App.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import FetchDataSaturday from '@/components/fetchdata/FetchDataSaturday';
-import { set } from '@/utils';
+import { FetchDataSaturday } from '@/components/fetchdata';
+import { set } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function SaturdayPage() {

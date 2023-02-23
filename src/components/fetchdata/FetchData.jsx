@@ -1,6 +1,5 @@
 import React from 'react';
-import { Loading } from '@/components/common';
-import { ChooseSource } from '@/components/fetchdata';
+import { ChooseSource, Loading } from '@/components/fetchdata';
 import { useFetchData } from '@/components/fetchdata/hooks';
 
 export default function FetchData() {

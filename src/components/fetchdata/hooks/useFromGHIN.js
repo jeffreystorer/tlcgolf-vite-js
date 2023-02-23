@@ -4,8 +4,11 @@ import {
   processCourseDataFromGHIN,
   setCanadianData,
   setFoundGolferAndIsLoggedIn,
-} from '@/services/utils';
-import { useFetchRequests, useFindGolfer } from '@/services/hooks';
+} from '@/components/fetchdata/apis/utils';
+import {
+  useFetchRequests,
+  useFindGolfer,
+} from '@/components/fetchdata/apis/hooks';
 
 export default function useFromGHIN() {
   const [loading, setLoading] = useState(true);

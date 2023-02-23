@@ -1,8 +1,8 @@
 import React from 'react';
 import { useVisibilityChange } from 'use-visibility-change';
 import { Table } from '@/components/export';
-import FetchData from '@/components/fetchdata/FetchData';
-import { loginStale } from '@/utils';
+import { FetchData } from '@/components/fetchdata';
+import { loginStale } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function ExportPage() {

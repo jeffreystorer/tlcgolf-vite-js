@@ -2,9 +2,9 @@ import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { LineupTextarea } from '@/components/lineup';
 import { AutoButtons } from '@/components/lineup/buttons';
-import { useGenerateTeamTables } from '@/hooks';
+import { useGenerateTeamTables } from '@/components/lineup/hooks';
 import * as state from '@/store';
-import { createProgAdjMessage, getCourseName } from '@/utils';
+import { createProgAdjMessage, getCourseName } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function ActiveLineup() {

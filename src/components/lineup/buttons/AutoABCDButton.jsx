@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { useCreateTeam } from '@/hooks';
+import { useCreateTeam } from '@/components/lineup/hooks';
 import * as state from '@/store';
-import { setAutoABCD } from '@/utils';
+import { setAutoABCD } from '@/components/lineup/utils';
 import '@/styles/App.css';
 
 export default function AutoPopButton() {

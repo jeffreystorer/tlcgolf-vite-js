@@ -5,7 +5,7 @@ import {
   AddPlayersToLineupTable,
   DeletePlayersFromLineupTable,
 } from '@/components/lineup';
-import { usePlayersNotInLineup } from '@/hooks';
+import { usePlayersNotInLineup } from '@/components/lineup/hooks';
 import * as state from '@/store';
 import '@/styles/App.css';
 

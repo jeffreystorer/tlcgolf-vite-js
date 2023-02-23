@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading } from '@/components/common';
+import { Loading } from '@/components/fetchdata';
 import { SaturdayTable } from '@/components/saturday';
 import { useFromGHIN } from '@/components/fetchdata/hooks';
 

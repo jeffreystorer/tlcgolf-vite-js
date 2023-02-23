@@ -6,7 +6,7 @@ import Table from 'react-bootstrap/Table';
 import { useRecoilValue } from 'recoil';
 import { TableHeader, TableBody } from '@/components/groups';
 import { GroupAndCourseDropdowns } from '@/components/common';
-import { get, set } from '@/utils';
+import { get, set } from '@/components/common/utils';
 import * as state from '@/store';
 
 export default function TableAll() {

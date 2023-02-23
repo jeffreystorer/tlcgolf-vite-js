@@ -1,8 +1,8 @@
 import React from 'react';
 import { useVisibilityChange } from 'use-visibility-change';
-import FetchData from '@/components/fetchdata/FetchData';
+import { FetchData } from '@/components/fetchdata';
 import { Table } from '@/components/lineup';
-import { loginStale } from '@/utils';
+import { loginStale } from '@/components/common/utils';
 import '@/styles/App.css';
 
 export default function LineupPage() {

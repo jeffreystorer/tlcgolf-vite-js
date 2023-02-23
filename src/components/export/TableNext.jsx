@@ -5,7 +5,7 @@ import { ref, getDatabase } from 'firebase/database';
 import { useList } from 'react-firebase-hooks/database';
 import { TableAll } from '@/components/export';
 import * as state from '@/store';
-import { set } from '@/utils';
+import { set } from '@/components/common/utils';
 
 export default function TableNext() {
   const currentLineupIndex = useRecoilValue(state.currentLineupIndex);

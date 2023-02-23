@@ -4,9 +4,9 @@ import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
 import * as _ from 'lodash';
-import { useRecomputeTeamTables } from '@/hooks';
+import { useRecomputeTeamTables } from '@/components/lineup/hooks';
 import * as state from '@/store';
-import { buildTeeArray } from '@/utils';
+import { buildTeeArray } from '@/components/common/utils';
 
 export default function TeeChoiceDropdown({ playerId, teamNumber, baseTee }) {
   const course = useRecoilValue(state.course);

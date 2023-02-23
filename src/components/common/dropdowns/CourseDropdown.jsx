@@ -1,8 +1,11 @@
 import React from 'react';
-import { useUpdatePlayersInLineup, useUpdateTeamTables } from '@/hooks';
+import {
+  useUpdatePlayersInLineup,
+  useUpdateTeamTables,
+} from '@/components/common/hooks';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import * as state from '@/store';
-import { set } from '@/utils';
+import { set } from '@/components/common/utils';
 export default function CourseDropdown({ groups, hasMultipleGroups }) {
   const updateTeamTables = useUpdateTeamTables();
   const updatePlayersInLineup = useUpdatePlayersInLineup();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { linkTimeOptionItems } from '@/optionitems';
+import { linkTimeOptionItems } from '@/components/lineup/optionitems';
 import * as state from '@/store';
 import '@/styles/App.css';
 

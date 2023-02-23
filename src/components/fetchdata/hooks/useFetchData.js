@@ -5,7 +5,7 @@ import {
   BASE_URL,
   SHEET_ID,
   BATCH_KEY,
-} from '@/services/constants';
+} from '@/components/fetchdata/apis/constants';
 import {
   setCaptains,
   setWednesdaySchedules,
@@ -16,9 +16,12 @@ import {
   setCourseData,
   setFoundGolferAndIsLoggedIn,
   setPlayersAndGroups,
-} from '@/services/utils';
-import { useFetchSheetsData, useFetchToken } from '@/services/hooks';
-import { get, set } from '@/utils';
+} from '@/components/fetchdata/apis/utils';
+import {
+  useFetchSheetsData,
+  useFetchToken,
+} from '@/components/fetchdata/apis/hooks';
+import { get, set } from '@/components/common/utils';
 
 export default function useFetchData() {
   const [loading, setLoading] = useState(true);

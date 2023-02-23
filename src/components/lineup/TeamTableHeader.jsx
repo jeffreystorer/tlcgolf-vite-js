@@ -5,8 +5,8 @@ import { ChevronDown } from 'react-feather';
 import { ChevronUp } from 'react-feather';
 import * as _ from 'lodash';
 import { TitledBox } from '@/components/common';
-import { createLineupTableHeaderRow, getTeeTimes } from '@/utils';
-import * as options from '@/optionitems';
+import { returnHeaderRow, getTeeTimes } from '@/components/common/utils';
+import * as options from '@/components/lineup/optionitems';
 import * as state from '@/store';
 
 const TeamTableHeader = ({ teamNumber, teamMembers }) => {
@@ -60,7 +60,7 @@ const TeamTableHeader = ({ teamNumber, teamMembers }) => {
     setTeamTables(newTeamTables);
   }
 
-  let cols = createLineupTableHeaderRow(teesSelected[course]);
+  let cols = returnHeaderRow(teesSelected[course]);
   const getHeader = () => {
     cols.shift();
     var keys = cols;

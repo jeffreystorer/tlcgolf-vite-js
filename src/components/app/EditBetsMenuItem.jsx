@@ -1,6 +1,6 @@
 import React from 'react';
 import '@/styles/App.css';
-import { set } from '@/utils';
+import { set } from '@/components/common/utils';
 
 export default function EditBetsItem() {
   const url =

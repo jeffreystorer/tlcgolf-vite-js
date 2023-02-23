@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilState, useResetRecoilState, useRecoilValue } from 'recoil';
-import { get, set } from '@/utils';
+import { get, set } from '@/components/common/utils';
 import * as state from '@/store';
 
 export default function CaptainsDropdown({ snapshots }) {

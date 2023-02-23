@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { usePlayersNotInLineup } from '@/hooks';
+import { usePlayersNotInLineup } from '@/components/lineup/hooks';
 import * as state from '@/store';
 import '@/styles/App.css';
 

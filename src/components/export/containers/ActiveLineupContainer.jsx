@@ -13,7 +13,7 @@ import {
   createProgAdjMessage,
   getCourseName,
   getTeeTimes,
-} from '@/utils';
+} from '@/components/common/utils';
 
 export default function ActiveLineupContainer({
   showFirstName,

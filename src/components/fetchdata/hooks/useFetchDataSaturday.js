@@ -1,8 +1,19 @@
 import { useEffect, useState } from 'react';
-import { SHEET_URL, BASE_URL, SHEET_ID, BATCH_KEY } from '@/services/constants';
-import { setSheetUrl, setPlayersAndGroups } from '@/services/utils';
-import { useFetchSheetsData, useFetchToken } from '@/services/hooks';
-import { get, set } from '@/utils';
+import {
+  SHEET_URL,
+  BASE_URL,
+  SHEET_ID,
+  BATCH_KEY,
+} from '@/components/fetchdata/apis/constants';
+import {
+  setSheetUrl,
+  setPlayersAndGroups,
+} from '@/components/fetchdata/apis/utils';
+import {
+  useFetchSheetsData,
+  useFetchToken,
+} from '@/components/fetchdata/apis/hooks';
+import { get, set } from '@/components/common/utils';
 
 export default function useFetchDataSaturday() {
   const [loading, setLoading] = useState(true);

@@ -7,9 +7,10 @@ import {
   PDFButtonsContainer,
 } from '@/components/export/containers';
 import { LineupImage, Collage } from '@/components/export/images';
-import { dimensionArray } from '@/optionitems';
+import { dimensionArray } from '@/components/export/optionitems';
 import * as state from '@/store';
-import { get, set, getCollageSetting } from '@/utils';
+import { get, set } from '@/components/common/utils';
+import { returnCollageSetting } from '@/components/export/utils';
 import '@/styles/App.css';
 
 const ButtonsAndImagesContainer = ({ dimensionIndex }) => {
@@ -48,7 +49,7 @@ const ButtonsAndImagesContainer = ({ dimensionIndex }) => {
 
   useEffect(() => {
     setPCSetting(
-      getCollageSetting(dataUrl, rowCount, colCount, pcWidthPx, pcHeightPx)
+      returnCollageSetting(dataUrl, rowCount, colCount, pcWidthPx, pcHeightPx)
     );
 
     setPDFLoading(false);

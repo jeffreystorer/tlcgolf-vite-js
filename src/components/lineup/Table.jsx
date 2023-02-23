@@ -2,8 +2,9 @@ import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { TableAll } from '@/components/lineup';
 import { GroupAndCourseDropdowns } from '@/components/common';
-import { courses } from '@/data';
-import { get, returnHasMultipleGroups } from '@/utils';
+import { courses } from '@/components/common/data';
+import { get } from '@/components/common/utils';
+import { returnHasMultipleGroups } from '@/components/groups/utils';
 import * as state from '@/store';
 import '@/styles/App.css';
 

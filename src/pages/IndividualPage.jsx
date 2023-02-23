@@ -6,13 +6,10 @@ import {
   CHTableBody,
   TSTableBody,
 } from '@/components/individual';
-import FetchData from '@/components/fetchdata/FetchData';
-import {
-  get,
-  getIndividualGHIN,
-  loginStale,
-  returnAllTeesSelected,
-} from '@/utils';
+import { FetchData } from '@/components/fetchdata';
+import { get, loginStale } from '@/components/common/utils';
+import { returnAllTeesSelected } from '@/pages/utils';
+import { getIndividualGHIN } from '@/components/individual/utils';
 import '@/styles/App.css';
 
 export default function IndividualPage() {
