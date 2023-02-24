@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from '@/components/common';
 import '@/styles/App.css';
 
-export default function SignInForm({
+export default function SignIn({
   ghinNumber,
   lastName,
   handleInputChange,

@@ -14,7 +14,12 @@ export { default as loginStale } from '@/components/common/utils/loginStale';
 export { default as setRatingSlopePar } from '@/components/common/utils/setRatingSlopePar';
 export { default as setTeamHcpAndProgs } from '@/components/common/utils/setTeamHcpAndProgs';
 export { default as shuffleArray } from '@/components/common/utils/shuffleArray';
-export { get, set } from '@/components/common/utils/localStorage';
+export {
+  clear,
+  get,
+  remove,
+  set,
+} from '@/components/common/utils/localStorage';
 export {
   indexOfGolfer,
   aLocalNumber,

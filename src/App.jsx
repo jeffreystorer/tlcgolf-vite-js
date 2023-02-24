@@ -17,12 +17,14 @@ import {
   EditTableMenuItem,
 } from '@/components/app';
 import { SaturdayTable } from '@/components/saturday';
+import { DataPresentation } from '@/components/lookup';
 import {
   ExportPage,
   GroupsPage,
   HelpPage,
   IndividualPage,
   LineupPage,
+  LookupPage,
   SaturdayPage,
   SignInPage,
   SignOutPage,
@@ -60,10 +62,14 @@ export default function App() {
             <Route path='individual' element={<IndividualPage />} />
             <Route path='tutorials' element={<TutorialsPage />} />
             <Route path='help' element={<HelpPage />} />
-            <Route path='signout' element={<SignOutPage />} />{' '}
+            <Route path='signout' element={<SignOutPage />} />
             <Route
               path='saturday'
-              element={<SaturdayTable loggedIn={true} />}></Route>
+              element={<SaturdayTable loggedIn={true} />}
+            />
+            <Route path='lookup' element={<LookupPage />} />
+            <Route path='ghininfo' element={<DataPresentation />} />
+
             {hasSchedule &&
               schedules.map((schedule) => {
                 let path = '/' + schedule.name.toLowerCase() + '-schedule';
@@ -150,6 +156,11 @@ function Layout() {
                   </NavDropdown.Item>
                 </LinkContainer>
               )}
+              <LinkContainer activeStyle={styleActive} to='/lookup'>
+                <NavDropdown.Item eventkey='lookup'>
+                  Lookup GHIN Information
+                </NavDropdown.Item>
+              </LinkContainer>
               <NavDropdown.Divider />
               {hasSchedule &&
                 schedules.map((schedule) => {
