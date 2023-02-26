@@ -1,4 +1,8 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
 import { Loading } from '@/components/fetchdata';
 import { get } from '@/components/common/utils';
 import { useGetScores } from '@/components/scores/hooks';
@@ -28,44 +32,67 @@ export default function ScoresTable() {
 
   return (
     <>
-      <br />
-      <h3 className='center'>Revision Scores for GHIN Number {golfer_id}</h3>
-      <br />
-      <table id='scores-table'>
-        <thead>
-          <tr>
-            <th>Score</th>
-            <th>Date</th>
-            <th>C.R./Slope</th>
-            <th>PCC</th>
-            <th>Differential</th>
-            <th>Course/Tee</th>
-          </tr>
-        </thead>
-        <tbody>
-          {scores
-            .filter((score) => score.revision)
-            .map((score, index) => {
-              const evenRow = Math.abs(index % 2) == 0;
-              return (
-                <tr key={index} className={`${evenRow ? '' : 'tr--shaded'}`}>
-                  <td>
-                    {score.used && '* '}
-                    {!score.used && '  '}
-                    {score.adjusted_gross_score} {score.score_type}
-                  </td>
-                  <td>{score.played_at}</td>
-                  <td>
-                    {score.course_rating}/{score.slope_rating}
-                  </td>
-                  <td>{score.PCC}</td>
-                  <td>{score.differential}</td>
-                  <td>{score.ghin_course_name_display}</td>
+      <Container className='center'>
+        <Row
+          className='center row'
+          xs='auto'
+          sm='auto'
+          md='auto'
+          lg='auto'
+          xl='auto'
+          xxl='auto'>
+          <Col xs='auto' sm='auto' md='auto' lg='auto' xl='auto' xxl='auto'>
+            <br />
+            <h3 className='center'>
+              Revision Scores for GHIN Number {golfer_id}
+            </h3>
+            <br />
+            <Table
+              responsive
+              id='scores-table'
+              size='sm'
+              className='w-100 center'>
+              <thead>
+                <tr>
+                  <th className='score'>Score</th>
+                  <th className='playing_date'>Date</th>
+                  <th className='rating_slope'>C.R./Slope</th>
+                  <th className='PCC'>PCC</th>
+                  <th className='diff'>Diff.</th>
+                  <th className='course_tee'>Course/Tee</th>
                 </tr>
-              );
-            })}
-        </tbody>
-      </table>
+              </thead>
+              <tbody>
+                {scores
+                  .filter((score) => score.revision)
+                  .map((score, index) => {
+                    const evenRow = Math.abs(index % 2) == 0;
+                    return (
+                      <tr
+                        key={index}
+                        className={`${evenRow ? '' : 'tr--shaded'}`}>
+                        <td className='score'>
+                          {score.used && '* '}
+                          {!score.used && '  '}
+                          {score.adjusted_gross_score} {score.score_type}
+                        </td>
+                        <td className='playing_date'>{score.played_at}</td>
+                        <td className='rating_slope'>
+                          {score.course_rating}/{score.slope_rating}
+                        </td>
+                        <td className='diff'>{score.PCC}</td>
+                        <td>{score.differential}</td>
+                        <td className='course_tee'>
+                          {score.ghin_course_name_display}
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
