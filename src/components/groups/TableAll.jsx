@@ -32,7 +32,7 @@ export default function TableAll() {
           lg='auto'
           xl='auto'
           xxl='auto'
-          className='justify-content-center'>
+          className='justify-content-center center'>
           <Col xs='auto' sm='auto' md='auto' lg='auto' xl='auto' xxl='auto'>
             <GroupAndCourseDropdowns />
             <br />
