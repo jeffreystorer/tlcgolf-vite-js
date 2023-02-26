@@ -26,7 +26,7 @@ td {
 
 .score {
   text-align: left;
-  width: fit-content;
+  width: 6rem;
 }
 
 .playing_date {
