@@ -25,6 +25,8 @@ export default function returnBodyRows(course, group, groups) {
 
   //construct the row
   function compute(aPlayer, index) {
+    let rowReturn = []
+    rowReturn[0] = aPlayer[0]
     strHcpIndex = aPlayer[4];
     let firstName = aPlayer[3];
     let lastName = aPlayer[1];
@@ -34,13 +36,13 @@ export default function returnBodyRows(course, group, groups) {
     if ((showLocalNumbers === true) | (showLocalNumbers === 'true'))
       prefix = local + ' ';
     let player = prefix + firstName + ' ' + lastName + ' (' + strHcpIndex + ')';
-    let rowReturn = returnCourseHandicapArray(
+    rowReturn[1] = returnCourseHandicapArray(
       gender,
       strHcpIndex,
       course,
       teesSelected[course]
     );
-    rowReturn.unshift(player);
+    rowReturn[1].unshift(player);
     return rowReturn;
   }
 

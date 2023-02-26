@@ -1,3 +1,3 @@
 export { default as LookupGolfer } from '@/components/lookup/LookupGolfer';
-export { default as DataEntry } from '@/components/lookup/DataEntry';
-export { default as DataPresentation } from '@/components/lookup/DataPresentation';
+export { default as LookupEntryForm } from '@/components/lookup/LookupEntryForm';
+export { default as LookupDataTable } from '@/components/lookup/LookupDataTable';

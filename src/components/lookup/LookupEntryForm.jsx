@@ -2,7 +2,7 @@ import React from 'react';
 import { states } from '@/components/lookup/optionitems';
 import '@/styles/App.css';
 
-export default function DataEntry({ handleInputChange, handleClick }) {
+export default function LookupEntryForm({ handleInputChange, handleClick }) {
   return (
     <>
       <div className='div--center'>

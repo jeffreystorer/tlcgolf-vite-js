@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DataEntry, LookupGolfer } from '@/components/lookup';
+import { LookupEntryForm, LookupGolfer } from '@/components/lookup';
 import { get, remove, set } from '@/components/common/utils';
 import '@/styles/App.css';
 
@@ -25,7 +25,7 @@ export default function LookupPage() {
   return (
     <>
       {loading ? (
-        <DataEntry
+        <LookupEntryForm
           handleInputChange={handleInputChange}
           handleClick={handleClick}
         />

@@ -166,6 +166,13 @@ select {
   text-align: center;
   width: 100%;
 }
+
+.golfer_id {
+  color: rgb(111, 131, 254);
+  text-decoration: underline;
+  text-decoration-color: rgb(114, 131, 254);
+}
+
 .groups-table-body-row_td-left {
   background-color: #fff;
   color: #000;
@@ -462,6 +469,10 @@ select {
   width: fit-content;
   width: -moz-fit-content;
   width: -webkit-fit-content;
+}
+
+.link--revision-scores {
+  font-size: 0.8rem;
 }
 .list--text-align-left {
   text-align: left;

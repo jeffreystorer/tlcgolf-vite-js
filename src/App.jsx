@@ -17,7 +17,8 @@ import {
   EditTableMenuItem,
 } from '@/components/app';
 import { SaturdayTable } from '@/components/saturday';
-import { DataPresentation } from '@/components/lookup';
+import { LookupDataTable } from '@/components/lookup';
+import { ScoresTable } from '@/components/scores'
 import {
   ExportPage,
   GroupsPage,
@@ -68,7 +69,8 @@ export default function App() {
               element={<SaturdayTable loggedIn={true} />}
             />
             <Route path='lookup' element={<LookupPage />} />
-            <Route path='ghininfo' element={<DataPresentation />} />
+            <Route path='ghininfo' element={<LookupDataTable />} />
+            <Route path='scores' element={<ScoresTable />}/>
 
             {hasSchedule &&
               schedules.map((schedule) => {

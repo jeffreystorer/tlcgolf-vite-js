@@ -1,8 +1,10 @@
 import React from 'react';
-import { get } from '@/components/common/utils';
+import { useNavigate } from 'react-router-dom';
+import { get, set } from '@/components/common/utils';
 import '@/components/lookup/styles/lookup.css';
 
-export default function DataPresentation() {
+export default function LookupDataTable() {
+  const navigate = useNavigate();
   let searchedName = get('last_name');
   if (get('first_name')) searchedName = searchedName + ', ' + get('first_name');
   const golfers = get('golfers').golfers;
@@ -20,10 +22,19 @@ export default function DataPresentation() {
     return rowsTD;
   }
 
+  function onClick(e) {
+    let golfer_id = e.target.innerText;
+    set('golfer_id', golfer_id);
+    navigate('/scores');
+  }
+
   return (
     <>
       <br />
       <h3 className='center'>GHIN Information for {searchedName}</h3>
+      <h6 className='center golfer_id link--revision-scores'>
+        Click On GHIN Number below for Revision Scores
+      </h6>
       <br />
       <table id='lookup-table'>
         <thead>
@@ -48,7 +59,9 @@ export default function DataPresentation() {
                 <tr key={index} className={`${evenRow ? '' : 'tr--shaded'}`}>
                   <td>{golfer.first_name}</td>
                   <td>{golfer.handicap_index}</td>
-                  <td>{golfer.ghin}</td>
+                  <td className='golfer_id' onClick={onClick}>
+                    {golfer.ghin}
+                  </td>
                   <td>{golfer.club_name}</td>
                   <td>{golfer.primary_club_state}</td>
                 </tr>

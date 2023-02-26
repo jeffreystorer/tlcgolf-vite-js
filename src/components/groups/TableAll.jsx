@@ -37,13 +37,20 @@ export default function TableAll() {
             <GroupAndCourseDropdowns />
             <br />
             <br />
-            <Table id='groups-table-div' striped size='sm' className='w-100'>
+            <Table id='groups-table-div' size='sm' className='w-100'>
               <thead>
                 <tr>
                   <th
                     colSpan={teesSelected[course].length + 1}
                     className='tr--center-background-white'>
                     {group} at {course.toUpperCase()}
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    colSpan={teesSelected[course].length + 1}
+                    className='tr--center-background-white golfer_id link--revision-scores'>
+                    Click on a Player for Revision Scores
                   </th>
                 </tr>
                 <TableHeader />

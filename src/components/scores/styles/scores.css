@@ -1,0 +1,22 @@
+.center {
+  text-align: center;
+}
+
+#scores-table {
+  margin-left: auto;
+  margin-right: auto;
+  font: 1rem sans-serif;
+  width: 95%;
+}
+
+.tr--shaded {
+  background-color: #d9d9d9;
+}
+
+tr {
+  line-height: 1.8rem;
+}
+
+td {
+  white-space: break-spaces;
+}

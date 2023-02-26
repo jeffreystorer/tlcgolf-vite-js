@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { useNavigate } from 'react-router-dom';
 import { useVisibilityChange } from 'use-visibility-change';
 import {
   IndividualTableHeader,
@@ -7,13 +8,16 @@ import {
   TSTableBody,
 } from '@/components/individual';
 import { FetchData } from '@/components/fetchdata';
-import { get, loginStale } from '@/components/common/utils';
+import { ScoresTable } from '@/components/scores';
+import { get, loginStale, set } from '@/components/common/utils';
 import { returnAllTeesSelected } from '@/pages/utils';
 import { getIndividualGHIN } from '@/components/individual/utils';
 import '@/styles/App.css';
 
 export default function IndividualPage() {
+  const navigate = useNavigate();
   const dataMode = get('dataMode');
+  set('golfer_id', get('ghinNumber'));
   const [index, gender, golfer] = getIndividualGHIN(dataMode);
   // eslint-disable-next-line
   const [teeLabels, teeValues, ratings, slopes, pars] = get('courseData');
@@ -24,6 +28,10 @@ export default function IndividualPage() {
   };
   useVisibilityChange({ onShow });
 
+  function onClick() {
+    navigate('/scores');
+  }
+
   let allTeesSelected = returnAllTeesSelected(teesSelected);
 
   if (loginStale()) return <FetchData />;
@@ -31,7 +39,12 @@ export default function IndividualPage() {
   return (
     <>
       <br />
-      <div className='golfer--center'>{golfer}</div>
+      <div className='golfer--center'>
+        <h4>{golfer}</h4>
+        <h6 className='golfer_id link--revision-scores' onClick={onClick}>
+          Click Here for Revision Scores
+        </h6>
+      </div>
       <br />
       <div>
         <Table striped size='lg' className='w-25'>
