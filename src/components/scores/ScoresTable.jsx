@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import { Loading } from '@/components/fetchdata';
+import { Header } from '@/components/common';
 import { get } from '@/components/common/utils';
 import { useGetScores } from '@/components/scores/hooks';
 import '@/components/scores/styles/scores.css';
@@ -49,9 +50,10 @@ export default function ScoresTable() {
           xl='auto'
           xxl='auto'>
           <Col xs='auto' sm='auto' md='auto' lg='auto' xl='auto' xxl='auto'>
-            <br />
             {isLoggedIn === 'false' && (
               <>
+                <Header />
+                <br />
                 <button className='button not_stacked' onClick={onClick}>
                   Back to Saturday Page
                 </button>
