@@ -50,3 +50,35 @@ td {
   text-align: left;
   width: fit-content;
 }
+
+.button {
+  background-color: #cccccc;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  color: #3378ac;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 600;
+  height: 26px;
+  margin: 2px;
+  padding: 1px 15px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-appearance: none;
+}
+
+.not_stacked {
+  margin: 2px;
+}
+
+.stacked {
+  margin: 2px 2px 8px 2px;
+}
+.button:hover {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #c00;
+  -webkit-appearance: none;
+}

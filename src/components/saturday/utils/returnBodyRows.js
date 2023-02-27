@@ -26,11 +26,13 @@ export default function createSaturdayTableBodyRows() {
 
   //construct the row
   function compute(aPlayer, index) {
+    let rowReturn = [];
+    rowReturn[0] = aPlayer[0];
     strHcpIndex = aPlayer[4];
     let lastName = aPlayer[1];
     gender = aPlayer[5];
     let player = lastName + ' (' + strHcpIndex + ')';
-    let rowReturn = [player];
+    rowReturn[1] = [player];
     courses.forEach(pushHandicaps);
     function pushHandicaps(item, index) {
       let course = item;
@@ -43,7 +45,7 @@ export default function createSaturdayTableBodyRows() {
       );
       courseHandicaps.forEach(pushCH);
       function pushCH(item) {
-        rowReturn.push(item);
+        rowReturn[1].push(item);
       }
     }
     return rowReturn;

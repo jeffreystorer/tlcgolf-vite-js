@@ -42,3 +42,9 @@ td.saturday-other-row-cell:nth-child(3n + 1) {
 .tr--shaded {
   background-color: #d9d9d9;
 }
+
+.golfer_id {
+  color: rgb(111, 131, 254);
+  text-decoration: underline;
+  text-decoration-color: rgb(114, 131, 254);
+}

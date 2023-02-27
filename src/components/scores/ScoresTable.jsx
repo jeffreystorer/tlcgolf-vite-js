@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,6 +10,8 @@ import { useGetScores } from '@/components/scores/hooks';
 import '@/components/scores/styles/scores.css';
 
 export default function ScoresTable() {
+  const navigate = useNavigate();
+  const isLoggedIn = get('isLoggedIn');
   const golfer_id = get('golfer_id');
   const from_date_played = get('from_date_played');
   const [loading] = useGetScores(golfer_id, from_date_played);
@@ -30,6 +33,10 @@ export default function ScoresTable() {
     return rowsTD;
   }
 
+  function onClick() {
+    navigate(-1);
+  }
+
   return (
     <>
       <Container className='center'>
@@ -43,6 +50,15 @@ export default function ScoresTable() {
           xxl='auto'>
           <Col xs='auto' sm='auto' md='auto' lg='auto' xl='auto' xxl='auto'>
             <br />
+            {isLoggedIn === 'false' && (
+              <>
+                <button className='button not_stacked' onClick={onClick}>
+                  Back to Saturday Page
+                </button>
+                <br />
+                <br />
+              </>
+            )}
             <h3 className='center'>
               Revision Scores for GHIN Number {golfer_id}
             </h3>
