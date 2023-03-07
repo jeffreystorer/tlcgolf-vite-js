@@ -53,14 +53,14 @@ export default function ScoresTable() {
             {isLoggedIn === 'false' && (
               <>
                 <Header />
-                <br />
-                <button className='button not_stacked' onClick={onClick}>
-                  Back to Saturday Page
-                </button>
-                <br />
-                <br />
               </>
             )}
+            <br />
+            <button className='button not_stacked' onClick={onClick}>
+              Back to Previous Page
+            </button>
+            <br />
+            <br />
             <h3 className='center'>
               Revision Scores for GHIN Number {golfer_id}
             </h3>
