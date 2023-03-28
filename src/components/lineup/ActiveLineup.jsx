@@ -6,6 +6,7 @@ import { useGenerateTeamTables } from '@/components/lineup/hooks';
 import * as state from '@/store';
 import { createProgAdjMessage, getCourseName } from '@/components/common/utils';
 import '@/styles/App.css';
+import { ok } from 'assert';
 
 export default function ActiveLineup() {
   const generateTeamTables = useGenerateTeamTables();
@@ -14,6 +15,7 @@ export default function ActiveLineup() {
   const progAdj = useRecoilValue(state.progAdj);
   const progs069 = useRecoilValue(state.progs069);
   const okToSave = useRecoilValue(state.okToSave);
+  const okToAddPlayers = useRecoilValue(state.okToAddPlayers);
   const progAdjMessage = createProgAdjMessage(progAdj, progs069);
   const courseName = getCourseName(course);
   let header = '';
@@ -39,7 +41,7 @@ export default function ActiveLineup() {
           </tr>
         </tbody>
         <tfoot className='tfoot'>
-          {progs069 > 0 && (
+          {progs069 > 0 && okToAddPlayers && (
             <>
               <tr>
                 <td></td>
