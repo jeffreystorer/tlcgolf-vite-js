@@ -1,14 +1,16 @@
 import React from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import * as state from '@/store';
 import '@/styles/App.css';
 
 export default function ProgAdjDropdown() {
   const [progAdj, setProgAdj] = useRecoilState(state.progAdj);
-
+  const progs069 = useRecoilValue(state.progs069);
   const handleChange = (event) => {
     setProgAdj(event.target.value);
   };
+
+  if (progs069 === '' || progs069 === '0') return false;
 
   return (
     <>

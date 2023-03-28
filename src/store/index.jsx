@@ -203,12 +203,12 @@ export const textareaValue = atom({
 
 export const progs069 = atom({
   key: 'progs069',
-  default: '0',
+  default: '',
 });
 
 export const progAdj = atom({
   key: 'progAdj',
-  default: '0',
+  default: '',
 });
 
 export const teeChoiceChangedId = atom({

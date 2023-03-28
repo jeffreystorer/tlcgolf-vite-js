@@ -13,7 +13,7 @@ export default function Progs069Dropdown() {
     <>
       <label className='selector_left'>
         <select value={progs069} onChange={handleChange}>
-          <option value=''>Progs Y/N?</option>
+          <option value=''>Progs?</option>
           <option value='0'>No Progs</option>
           <option value='6'>Progs 6/6/6</option>
           <option value='9'>Progs 9&9</option>
