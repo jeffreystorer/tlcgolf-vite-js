@@ -9,4 +9,5 @@ export { default as SaturdayPage } from '@/pages/SaturdayPage';
 export { default as SignInPage } from '@/pages/SignInPage';
 export { default as SignOutPage } from '@/pages/SignOutPage';
 export { default as SchedulePage } from '@/pages/SchedulePage';
+export { default as TableCreatePage } from '@/pages/TableCreatePage';
 export { default as TutorialsPage } from '@/pages/TutorialsPage';

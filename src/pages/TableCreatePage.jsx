@@ -2,7 +2,7 @@ import React from 'react';
 import { EditTableButton } from '@/components/common';
 import { get } from '@/components/common/utils';
 
-export default function TableCreate() {
+export default function TableCreatePage() {
   const ghinNumber = get('ghinNumber');
   let text = 'Create Table';
   return (

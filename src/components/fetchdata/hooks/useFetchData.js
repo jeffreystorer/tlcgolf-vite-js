@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   WEDNESDAY_URL,
   SHEET_URL,
@@ -24,6 +25,7 @@ import {
 import { get, set } from '@/components/common/utils';
 
 export default function useFetchData() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const ghinNumber = get('ghinNumber');
   const dataMode = get('dataMode');
@@ -44,20 +46,24 @@ export default function useFetchData() {
   useEffect(() => {
     if (!wednesdayLoading && !batchLoading && !sheetsLoading && !tokenLoading) {
       if (ghinNumber === '585871') setWednesdaySchedules(wednesdayValues);
-      setSchedules(batchData.valueRanges[0].values);
-      setTutorials(batchData.valueRanges[1].values);
-      setBets(batchData.valueRanges[2].values);
-      setCaptains(batchData.valueRanges[3].values);
-      set('roster', batchData.valueRanges[4].values);
-      if (dataMode === 'roster') {
-        setFoundGolferAndIsLoggedIn(null);
-        setCourseData(batchData.valueRanges[5].values);
-      }
       setSheetUrl(sheetsData);
-      const hasGoogleSheet = get('hasGoogleSheet');
-      hasGoogleSheet && setPlayersAndGroups(batchData.valueRanges[6].values);
-      set('token', token.golfer_user.golfer_user_token);
-      setLoading(false);
+      try {
+        setSchedules(batchData.valueRanges[0].values);
+        setTutorials(batchData.valueRanges[1].values);
+        setBets(batchData.valueRanges[2].values);
+        setCaptains(batchData.valueRanges[3].values);
+        set('roster', batchData.valueRanges[4].values);
+        if (dataMode === 'roster') {
+          setFoundGolferAndIsLoggedIn(null);
+          setCourseData(batchData.valueRanges[5].values);
+        }
+        const hasGoogleSheet = get('hasGoogleSheet');
+        hasGoogleSheet && setPlayersAndGroups(batchData.valueRanges[6].values);
+        set('token', token.golfer_user.golfer_user_token);
+        setLoading(false);
+      } catch (error) {
+        navigate('/tablecreate');
+      }
     }
   }, [wednesdayLoading, batchLoading, sheetsLoading, tokenLoading]);
 

@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useResetRecoilState } from 'recoil';
 import * as state from '@/store';
 import '@/styles/App.css';
 import { get, set } from '@/components/common/utils';
 
 const EditTableButton = ({ text = 'Edit Table' }) => {
+  const navigate = useNavigate();
   const resetPlayersInLineup = useResetRecoilState(state.playersInLineup);
   const resetCurrentLineupIndex = useResetRecoilState(state.currentLineupIndex);
   const resetCurrentLineup = useResetRecoilState(state.currentLineup);
@@ -17,6 +19,7 @@ const EditTableButton = ({ text = 'Edit Table' }) => {
     resetCurrentLineupIndex();
     resetCurrentLineup();
     resetLineupTitle();
+    navigate('/');
     document.location = sheetURL;
   }
 

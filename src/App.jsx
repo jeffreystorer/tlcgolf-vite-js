@@ -30,6 +30,7 @@ import {
   SignInPage,
   SignOutPage,
   SchedulePage,
+  TableCreatePage,
   TutorialsPage,
 } from '@/pages';
 import * as state from '@/store';
@@ -46,6 +47,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path='/' element={<SignInPage />}></Route>
+          <Route path='/tablecreate' element={<TableCreatePage />}></Route>
           <Route path='/saturday' element={<SaturdayPage />}></Route>
           <Route path='/scores' element={<ScoresTable />}></Route>
         </Routes>
