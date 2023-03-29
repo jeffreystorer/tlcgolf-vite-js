@@ -25,6 +25,7 @@ export default function LookupDataTable() {
   function onClick(e) {
     let golfer_id = e.target.innerText;
     set('golfer_id', golfer_id);
+    navigator.clipboard.writeText(golfer_id);
     navigate('/scores');
   }
 
