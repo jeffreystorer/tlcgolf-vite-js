@@ -22,29 +22,72 @@ export default function HelpPage() {
                       The players in your groups are listed in a table in a
                       Google Sheets spreadsheet. You may have had this table
                       created for you before you first used the app. If not, you
-                      were prompted to create it when you first logged in. You
-                      can edit your players and groups by clicking the Edit
-                      Table item on the More..." dropdown menu in the navigation
-                      bar at the top of the page. This will allow you to edit
-                      your sheet without leaving the app. You will see within
-                      the app a Google Sheets spreadsheet called TLC-Golf with a
-                      separate sheet for each user of the app, named with the
-                      user's GHIN Number. Clicking the Edit Table item will take
-                      you directly to your own sheet.
+                      were prompted to create it when you first logged in.
                     </td>
                   </tr>
                   <tr></tr>
                   <tr>
                     <td></td>
                     <td className='help-table_text'>
-                      For your convenience in adding players to your table, the
-                      TLC-Golf Google Sheets spreadsheet includes a sheet named
-                      GHIN_Numbers, which has GHIN numbers and local numbers for
-                      all players in the club. This sheet is updated from time
-                      to time and may not always include new members who joined
-                      recently. You may filter this table to find players but
-                      please remove the filter when you are done and don't
-                      otherwise edit the table.
+                      {' '}
+                      <span style={{ fontWeight: 'bold' }}>
+                        To edit your players and groups,
+                      </span>{' '}
+                      click "More ..., Edit Table" on the dropdown menu in the
+                      navigation bar at the top of the page. This opens a
+                      browser tab with the Google Sheets spreadsheet. The sheet
+                      with your table, named with your GHIN number, should be
+                      open. If not, find your GHIN number in the list of sheets
+                      at the bottom and click on it.
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td></td>
+                    <td className='help-table_text'>
+                      {' '}
+                      <span style={{ fontWeight: 'bold' }}>
+                        To add a player,
+                      </span>{' '}
+                      follow the existing format. A simple way to add a player
+                      is to add new row where you wish the player to appear,
+                      copy the row above or below, and then edit it. This will
+                      ensure that you have the dropdown in the Tee column, where
+                      you set a player's default tee. Do not just use a blank
+                      cell and type in the tee name. When you have finished
+                      editing your table, use the browser's back button to
+                      return to the app, where your player list will be
+                      refreshed automatically. If you do not use the browser's
+                      back button, you may have to sign out and sign in again to
+                      refresh your player list.
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td></td>
+                    <td className='help-table_text'>
+                      <span style={{ fontWeight: 'bold' }}>
+                        To add a group,
+                      </span>{' '}
+                      add a new column to your table. The group columns can
+                      appear in any order after the Tee column. You can name a
+                      group as you prefer. If your group name has a space, use
+                      an underscore, e.g., "Working_Men's". If you add a dummy
+                      group at the right end of the columns, named "Walk", the
+                      app will let you show in your lineup whether or not a
+                      player walks, which is useful if you try to put walkers
+                      together and riders together.
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td></td>
+                    <td className='help-table_text'>
+                      <span style={{ fontWeight: 'bold' }}>
+                        To find the GHIN Number of a new player,
+                      </span>{' '}
+                      click "More ..., Lookup GHIN Information" on the dropdown
+                      menu in the navigation bar at the top of the page.
                     </td>
                   </tr>
                   <tr></tr>
@@ -52,12 +95,10 @@ export default function HelpPage() {
                     <td></td>
                     <td className='help-table_text'>
                       <span style={{ fontWeight: 'bold' }}>To add a guest</span>{' '}
-                      to the player's list for a group: if you know the guest's
-                      GHIN number, simply add the player to your list. Your list
-                      is not limited to club members; it can include any player
-                      with a GHIN number. If you don't know a guest's GHIN
-                      number, then add the player at the bottom of your list,
-                      using 9999991 as a dummy GHIN number.{'  '}
+                      to a group: add a row for the player, either
+                      alphabetically or at the bottom, as you prefer. If you
+                      don't know a guest's GHIN number, then use 9999991 as a
+                      dummy GHIN number.{'  '}
                       <span style={{ fontWeight: 'bold' }}>
                         When you are using a dummy GHIN number to add a guest
                       </span>
@@ -71,15 +112,14 @@ export default function HelpPage() {
                       </span>
                       {', '}
                       then you may put it in parenthesis after the guest's name,
-                      preceded by M for a man or W for a woman), e.g., John
-                      Guest (M6.4) or Jane Guest (W12.2). If you don't enter an
-                      index for a guest with a dummy GHIN number, your guest
-                      will appear with "(no index)" after his or her name. You
-                      will simply specify a manual course handicap from a chosen
-                      tee in your lineup (see below). Whether or not you know
-                      the GHIN number, you should add your guest(s) to your
-                      table before making a lineup that will include the
-                      guest(s).
+                      preceded by M for a man or W for a woman, e.g., John Guest
+                      (M6.4) or Jane Guest (W12.2). If you don't enter an index
+                      for a guest with a dummy GHIN number, your guest will
+                      appear with "(no index)" after his or her name. You can
+                      then set a manual course handicap for the guest (see
+                      below). Whether or not you know the GHIN number, you
+                      should add your guest(s) to your table before making a
+                      lineup that will include the guest(s).
                     </td>
                   </tr>
                   <tr></tr>
